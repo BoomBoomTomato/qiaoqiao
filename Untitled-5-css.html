@@ -1,0 +1,115 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+        <title>搜索</title>
+        <meta charset="utf-8">  
+        <style>
+                body
+                {
+                    background-image:url('./a.jpg');
+                    background-repeat:no-repeat;
+                    background-position:right top;
+                    margin-right:200px;
+                }
+                ul{
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                }
+                li{
+                    float: left;
+                }
+                li a{
+                    display: block;
+                    color: lightslategrey;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    
+                }
+                li a:hover{
+                    color: aliceblue;
+                }
+                .dropbtn {
+                    color: lightslategrey;
+                    padding: 16px;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .dropdown {
+                    display: inline-block;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                }
+
+                .dropdown-content a {
+                    color: #b6c2b6;
+                    padding: 20px 20px;
+                    text-decoration: none;
+                    display: block;
+                }
+                .dropdown-content a:hover{
+                    color: aqua;
+                }
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+
+                .dropdown:hover .dropbtn {
+                    color: #b6c2b6;
+                }
+                inpt [type=text]{
+                    box-sizing: border-box;
+                    border: 2px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 100px;
+                    background-image: url('/a.jpg');
+                    background-position: 10px 10px; 
+                    background-repeat: no-repeat;
+                    padding: 10px 10px 20px 16px;
+                }
+                .center{
+                    padding: 250px;
+                    text-align: center;
+                    margin: auto;
+                    
+                }
+                .abc{
+                    margin: auto;
+                    padding: 15px;    
+                }
+            </style>  
+        </head>
+        <body>
+            <ul>
+                <li><a class="active">picture</a></li>
+                <li><a>video</a></li>
+                <li ><a>more</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn" style="background-color:transparent">···</button>
+                    <div class="dropdown-content">
+                    <a>map</a>
+                    <a>news</a>
+                    </div>
+                </div>
+            </ul>
+            <div class="center">
+               <form>
+                    <input type="text" name="search" style="width: 1000px;height: 50px;background-color: aliceblue;border-radius:9px;">
+               </form>
+               <div class="abc">
+                   <form>
+                    <input type="button" value="search" style="width: 100px;height: 40px;background-color: aliceblue;border-radius:9px;">
+                   </form>
+               </div>
+            </div>
+        </body>
+    </html>
