@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>timerDemo</title>
+  <title></title>
   <span style="color:red"></span>
 </head>
   <body style="text-align: center">
-    <button type="button" onclick="optionOnTime()">计时开始</button>
-    <div id="timeValue"></div>
+    <button type="button" onclick="timing()">计时开始</button>
+    <div id="time"></div>
   <script>
     var second=0;
     var flag = true;
     var clock;
-    var block=document.getElementById('timeValue');
+    var block=document.getElementById('time');
 
-    function optionOnTime()
+    function timing()
     {
       if (flag){
         clock=setInterval(timer,1000);
       }
       else{
         clearInterval(clock);
-        document.getElementById("timeValue").innerHTML="Time passed:"+"<span>"+second+"</span>"+"s";
+        document.getElementById("time").innerHTML="Time passed:"+"<span>"+second+"</span>"+"s";
       }
       flag=!flag;
     }
     function timer(){
       second++;
-      document.getElementById("timeValue").innerHTML="Time passed:"+"<span>"+second+"</span>"+"s";
+      document.getElementById("time").innerHTML="Time passed:"+"<span>"+second+"</span>"+"s";
     }
   </script>
 </body>
