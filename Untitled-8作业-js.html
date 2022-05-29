@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>timerDemo</title>
+  <span style="color:red"></span>
+</head>
+  <body style="text-align: center">
+    <button type="button" onclick="optionOnTime()">计时开始</button>
+    <div id="timeValue"></div>
+  <script>
+    var second=0;
+    var flag = true;
+    var clock;
+    var block=document.getElementById('timeValue');
+
+    function optionOnTime()
+    {
+      if (flag){
+        clock=setInterval(timer,1000);
+      }
+      else{
+        clearInterval(clock);
+        document.getElementById("timeValue").innerHTML="Time passed:"+"<span>"+second+"</span>"+"s";
+      }
+      flag=!flag;
+    }
+    function timer(){
+      second++;
+      document.getElementById("timeValue").innerHTML="Time passed:"+"<span>"+second+"</span>"+"s";
+    }
+  </script>
+</body>
+</html>
